@@ -25,6 +25,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/setting"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="24dp"
         android:layout_height="28dp"
