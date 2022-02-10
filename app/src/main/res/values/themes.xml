@@ -13,4 +13,26 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <style name="Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="Theme.ForcaERP20.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
 </resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:label=""
+        android:name="com.example.forcaerp20.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.forcaerp20.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:label=""
+        android:name="com.example.forcaerp20.NewsFragment"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:label=""
+        android:name="com.example.forcaerp20.AboutFragment"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:label=""
+        android:name="com.example.forcaerp20.HelpFragment"
+        tools:layout="@layout/fragment_help" />
+
+    <activity
+        android:id="@+id/dashboardActivity"
+        android:name="com.example.forcaerp20.DashboardActivity"
+        android:label=""
+        tools:layout="@layout/activity_dashboard" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.forcaerp20.LoginActivity"
+        android:label=""
+        tools:layout="@layout/activity_login" />
+</navigation>
