@@ -6,6 +6,13 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.example.forcaerp20.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit"
+        />
+
+    <fragment
         android:id="@+id/profileFragment"
         android:label=""
         android:name="com.example.forcaerp20.ProfileFragment"

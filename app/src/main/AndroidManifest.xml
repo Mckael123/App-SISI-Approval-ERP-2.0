@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ForcaERP20">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_homes"
@@ -17,7 +20,6 @@
         <activity
             android:name=".DashboardActivity"
             android:exported="true" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

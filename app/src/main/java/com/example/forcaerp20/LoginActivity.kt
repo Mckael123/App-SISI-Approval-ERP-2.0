@@ -19,8 +19,9 @@ class LoginActivity : AppCompatActivity() {
         val login = findViewById<Button>(R.id.btn_login)
 
         login.setOnClickListener {
-        val intentToHome = Intent(this, HomeActivity::class.java)
-        startActivity(intentToHome)
+            val intentToHome = Intent(this, HomeActivity::class.java)
+            startActivity(intentToHome)
+            finish()
     }
         Setting_btn.setOnClickListener {
             val view = View.inflate(this, R.layout.setting_popup, null)
