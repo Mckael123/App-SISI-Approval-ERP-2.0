@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -23,17 +24,16 @@ class EditProfileFragment : Fragment() {
         var editProfile: Button= view.findViewById(R.id.cameraProfile)
 
         editProfile.setOnClickListener {
-            val views = View.inflate(requireActivity(), R.layout.profile_popup, null)
+            val view = View.inflate(requireActivity(), R.layout.profile_popup, null)
             val builder = SettingtDialog.setView(view)
             val dialog = builder.create()
             dialog.show()
-
             dialog.setCancelable(false)
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
 
-            val profileTakebtn = views.findViewById<Button>(R.id.profileTake)
-            val profileNewbtn = views.findViewById<Button>(R.id.newProfile)
-            val profileDeletebtn = views.findViewById<Button>(R.id.deleteProfile)
+            val profileTakebtn = view.findViewById<TextView>(R.id.profileTake)
+            val profileNewbtn = view.findViewById<TextView>(R.id.newProfile)
+            val profileDeletebtn = view.findViewById<TextView>(R.id.deleteProfile)
 
             profileTakebtn.setOnClickListener {
                 dialog.dismiss()
@@ -43,9 +43,7 @@ class EditProfileFragment : Fragment() {
             }
             profileDeletebtn.setOnClickListener {
                 dialog.dismiss()
-            }
-
-        }
+            }}
 
         //edit header
         var editHeader: Button= view.findViewById(R.id.cameraHeader)
@@ -57,9 +55,9 @@ class EditProfileFragment : Fragment() {
             dialog.setCancelable(false)
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
 
-            val headerTakebtn = view.findViewById<Button>(R.id.takeapicture)
-            val headerNewbtn = view.findViewById<Button>(R.id.profileheader)
-            val headerDeletebtn = view.findViewById<Button>(R.id.deleteProfileHeader)
+            val headerTakebtn = view.findViewById<TextView>(R.id.takeapicture)
+            val headerNewbtn = view.findViewById<TextView>(R.id.profileheader)
+            val headerDeletebtn = view.findViewById<TextView>(R.id.deleteProfileHeader)
 
             headerTakebtn.setOnClickListener {
                 dialog.dismiss()

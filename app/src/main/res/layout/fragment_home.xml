@@ -63,8 +63,8 @@
             android:elevation="100dp"
             android:text="8"
             android:textColor="#35A6EF"
-            app:layout_constraintStart_toStartOf="@+id/appCompatButton"
-            app:layout_constraintTop_toTopOf="@+id/appCompatButton" />
+            app:layout_constraintStart_toStartOf="@+id/reportToDashboard"
+            app:layout_constraintTop_toTopOf="@+id/reportToDashboard" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -73,11 +73,11 @@
             android:layout_marginTop="231dp"
             android:elevation="100dp"
             android:src="@drawable/ic_baseline_arrow_circle_right_24"
-            app:layout_constraintStart_toStartOf="@+id/appCompatButton2"
+            app:layout_constraintStart_toStartOf="@+id/gotodashboard"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton"
+            android:id="@+id/reportToDashboard"
             android:layout_width="180dp"
             android:layout_height="93dp"
             android:layout_marginTop="20dp"
@@ -96,7 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton2"
+            android:id="@+id/gotodashboard"
             android:layout_width="371dp"
             android:layout_height="35dp"
             android:layout_marginTop="17dp"
@@ -110,7 +110,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+            app:layout_constraintTop_toBottomOf="@+id/reportToDashboard" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -119,7 +119,7 @@
             android:layout_marginTop="17dp"
             android:src="@drawable/image_home"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/gotodashboard" />
 
         <TextView
             android:id="@+id/textView8"
@@ -132,7 +132,7 @@
             android:textColor="#002060"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/gotodashboard" />
 
 
         <TextView
