@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,26 +26,33 @@
         app:layout_constraintStart_toStartOf="@+id/headerEditProfile"
         app:layout_constraintTop_toTopOf="@+id/headerEditProfile" />
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cameraHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="52dp"
-        android:src="@drawable/camera"
+        app:icon="@drawable/camera"
+        app:iconTint="#fff"
+        app:iconGravity="textStart"
         app:layout_constraintStart_toStartOf="@+id/headerEditProfile"
         app:layout_constraintTop_toTopOf="@+id/headerEditProfile" />
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cameraProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/camera"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:icon="@drawable/camera"
+        app:iconGravity="textStart"
+        app:iconTint="#fff"
         app:layout_constraintBottom_toBottomOf="@+id/profilEditDetail"
         app:layout_constraintEnd_toEndOf="@+id/profilEditDetail"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="@+id/profilEditDetail"
-        app:layout_constraintTop_toTopOf="@+id/profilEditDetail" />
+        app:layout_constraintTop_toTopOf="@+id/profilEditDetail"
+        app:layout_constraintVertical_bias="0.475" />
 
     <TextView
         android:id="@+id/changeProfile"
@@ -71,6 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/changeProfile">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,7 +102,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/confirm"
+        android:id="@+id/confirmEditProfile"
         android:layout_width="140dp"
         android:layout_height="33dp"
         android:layout_marginTop="108dp"
@@ -111,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/cancel"
+        android:id="@+id/cancelEditProfile"
         android:layout_width="140dp"
         android:layout_height="33dp"
         android:layout_marginStart="44dp"

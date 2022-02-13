@@ -11,10 +11,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
 import com.example.forcaerp20.databinding.ActivityHomeBinding
 
-class   HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
@@ -27,6 +26,10 @@ class   HomeActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarHome.toolbar)
 
+
+
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_homes)
@@ -34,9 +37,10 @@ class   HomeActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.profileFragment, R.id.homeFragment, R.id.newsFragment,R.id.dashboardActivity,R.id.aboutFragment,R.id.helpFragment,R.id.loginActivity,R.id.profileEditFragment
+                R.id.profileFragment, R.id.homeFragment, R.id.newsFragment,R.id.dashboardActivity,R.id.aboutFragment,R.id.helpFragment,R.id.loginActivity
             ), drawerLayout
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -45,5 +49,6 @@ class   HomeActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_homes)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+
     }
 }

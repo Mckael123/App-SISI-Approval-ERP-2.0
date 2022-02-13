@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ForcaERP20">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_homes"
             android:theme="@style/Theme.ForcaERP20.NoActionBar" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Dashboard"
+            />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true" />

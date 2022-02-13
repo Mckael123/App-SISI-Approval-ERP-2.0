@@ -6,18 +6,16 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/profileEditFragment"
-        android:name="com.example.forcaerp20.ProfileEditFragment"
-        android:label="fragment_profile_edit"
-        tools:layout="@layout/fragment_profile_edit"
-        />
-
-    <fragment
         android:id="@+id/profileFragment"
         android:label=""
         android:name="com.example.forcaerp20.ProfileFragment"
         tools:layout="@layout/fragment_profile">
 
+        <action
+            android:id="@+id/NavigateToEditProfile"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment
@@ -53,4 +51,15 @@
         android:name="com.example.forcaerp20.LoginActivity"
         android:label=""
         tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.forcaerp20.EditProfileFragment"
+        android:label=""
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/NavigateToProfile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
 </navigation>
