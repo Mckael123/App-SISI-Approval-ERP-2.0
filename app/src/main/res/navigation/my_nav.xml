@@ -23,13 +23,25 @@
         android:name="com.example.forcaerp20.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
-    </fragment>
 
+    </fragment>
     <fragment
         android:id="@+id/newsFragment"
         android:label=""
         android:name="com.example.forcaerp20.NewsFragment"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/NavigateToDetailNews"
+            app:destination="@id/detailNewsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" >
+            <argument
+                android:name="judul"
+                app:argType="string"
+                android:defaultValue="judul"
+                app:nullable="true" />
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:label=""
@@ -51,6 +63,27 @@
             app:destination="@id/FAQFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.forcaerp20.FAQFragment"
+        android:label=""
+        tools:layout="@layout/fragment_f_a_q" >
+        <action
+            android:id="@+id/action_FAQFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.forcaerp20.FeedbackFragment"
+        android:label=""
+        tools:layout="@layout/fragment_feedback" >
+        <action
+            android:id="@+id/action_feedbackFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
     </fragment>
 
     <activity
@@ -63,7 +96,6 @@
         android:name="com.example.forcaerp20.LoginActivity"
         android:label=""
         tools:layout="@layout/activity_login" />
-
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.forcaerp20.EditProfileFragment"
@@ -75,23 +107,33 @@
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/detailNewsFragment"
+        android:name="com.example.forcaerp20.DetailNewsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_detail_news" >
+        <action
+            android:id="@+id/NavigateTonewsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" >
 
-    <fragment
-        android:id="@+id/feedbackFragment"
-        android:name="com.example.forcaerp20.FeedbackFragment"
-        android:label=""
-        tools:layout="@layout/fragment_feedback" >
-        <action
-            android:id="@+id/action_feedbackFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/FAQFragment"
-        android:name="com.example.forcaerp20.FAQFragment"
-        android:label=""
-        tools:layout="@layout/fragment_f_a_q" >
-        <action
-            android:id="@+id/action_FAQFragment_to_helpFragment"
-            app:destination="@id/helpFragment" />
+        </action>
+        <argument
+            android:name="judul"
+            app:argType="string"
+            android:defaultValue="judul"
+            app:nullable="true" />
+
+<!--        <argument-->
+<!--            android:name="tanggal"-->
+<!--            app:argType="string"-->
+<!--            android:defaultValue="00-00-0000" />-->
+<!--        <argument-->
+<!--            android:name="image"-->
+<!--            app:argType="integer" />-->
+<!--        <argument-->
+<!--            android:name="isi"-->
+<!--            app:argType="string" />-->
     </fragment>
 </navigation>
