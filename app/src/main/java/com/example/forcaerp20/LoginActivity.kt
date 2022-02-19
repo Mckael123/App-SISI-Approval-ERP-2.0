@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.forcaerp20.HomePage.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var Setting_btn: Button

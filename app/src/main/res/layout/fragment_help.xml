@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelpFragment">
+    tools:context=".HelpPage.HelpFragment">
 
     <ImageView
         android:id="@+id/imageView7"
@@ -45,7 +45,7 @@ on earth the others are herefor I don’t know"
         app:layout_constraintTop_toTopOf="@+id/textView22" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/logoToFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -64,26 +64,27 @@ on earth the others are herefor I don’t know"
         android:textColor="#929591"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+        app:layout_constraintStart_toEndOf="@+id/logoToFeedback"
+        app:layout_constraintTop_toTopOf="@+id/logoToFeedback" />
 
     <ImageView
+        android:id="@+id/ArrowToFeedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:src="@drawable/arrow"
         app:layout_constraintStart_toEndOf="@+id/feedback"
-        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+        app:layout_constraintTop_toTopOf="@+id/logoToFeedback" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/logoToFAQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/question"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/logoToFeedback" />
 
     <TextView
         android:id="@+id/faq"
@@ -95,16 +96,17 @@ on earth the others are herefor I don’t know"
         android:textColor="#929591"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+        app:layout_constraintStart_toEndOf="@+id/logoToFAQ"
+        app:layout_constraintTop_toTopOf="@+id/logoToFAQ" />
 
     <ImageView
+        android:id="@+id/ArrowToFAQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:src="@drawable/arrow"
         app:layout_constraintStart_toEndOf="@+id/faq"
-        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+        app:layout_constraintTop_toTopOf="@+id/logoToFAQ" />
 
     <ImageView
         android:layout_width="wrap_content"

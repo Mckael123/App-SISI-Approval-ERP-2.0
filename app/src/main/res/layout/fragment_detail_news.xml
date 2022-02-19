@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".DetailNewsFragment">
+    tools:context=".NewsPage.DetailNewsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,14 +13,14 @@
 
         <TextView
             android:id="@+id/judul_news"
-            android:layout_width="wrap_content"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/lato_bold"
             android:text="Nama News"
             android:textColor="#333333"
-            android:textSize="24sp"
+            android:textSize="21sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,19 +40,36 @@
             android:id="@+id/image_news"
             android:layout_width="match_parent"
             android:layout_height="391dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tanggal_news"
-            tools:src="@drawable/slide1" />
+            tools:src="@drawable/template_foto_detail_news" />
 
         <TextView
             android:id="@+id/isi_news"
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="49dp"
-            android:text="isi news"
+            android:layout_marginTop="48dp"
             android:justificationMode="inter_word"
+            android:text="isi news"
+
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_news" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isi_news"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

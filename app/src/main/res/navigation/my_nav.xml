@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/profileFragment"
         android:label=""
-        android:name="com.example.forcaerp20.ProfileFragment"
+        android:name="com.example.forcaerp20.ProfilePage.ProfileFragment"
         tools:layout="@layout/fragment_profile">
 
         <action
@@ -20,26 +20,38 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.forcaerp20.HomeFragment"
+        android:name="com.example.forcaerp20.HomePage.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
 
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
         android:label=""
-        android:name="com.example.forcaerp20.NewsFragment"
+        android:name="com.example.forcaerp20.NewsPage.NewsFragment"
         tools:layout="@layout/fragment_news" >
         <action
-            android:id="@+id/NavigateToDetailNews"
+            android:id="@+id/action_nav_news_to_detailNewsFragment"
             app:destination="@id/detailNewsFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" >
             <argument
                 android:name="judul"
                 app:argType="string"
-                android:defaultValue="judul"
-                app:nullable="true" />
+                android:defaultValue="judul" />
+<!--            <argument-->
+<!--                android:name="image"-->
+<!--                app:argType="reference"/>-->
+            <argument
+                android:name="tanggal"
+                app:argType="string"
+                android:defaultValue="00-00-0000" />
+<!--            <argument-->
+<!--                android:name="isi"-->
+<!--                app:argType="string" />-->
         </action>
     </fragment>
     <fragment
@@ -51,7 +63,7 @@
     <fragment
         android:id="@+id/helpFragment"
         android:label=""
-        android:name="com.example.forcaerp20.HelpFragment"
+        android:name="com.example.forcaerp20.HelpPage.HelpFragment"
         tools:layout="@layout/fragment_help" >
         <action
             android:id="@+id/action_helpFragment_to_feedbackFragment"
@@ -68,7 +80,7 @@
 
     <fragment
         android:id="@+id/FAQFragment"
-        android:name="com.example.forcaerp20.FAQFragment"
+        android:name="com.example.forcaerp20.HelpPage.FAQFragment"
         android:label=""
         tools:layout="@layout/fragment_f_a_q" >
         <action
@@ -78,7 +90,7 @@
 
     <fragment
         android:id="@+id/feedbackFragment"
-        android:name="com.example.forcaerp20.FeedbackFragment"
+        android:name="com.example.forcaerp20.HelpPage.FeedbackFragment"
         android:label=""
         tools:layout="@layout/fragment_feedback" >
         <action
@@ -88,7 +100,7 @@
 
     <activity
         android:id="@+id/dashboardActivity"
-        android:name="com.example.forcaerp20.DashboardActivity"
+        android:name="com.example.forcaerp20.DashboardPage.DashboardActivity"
         android:label=""
         tools:layout="@layout/activity_dashboard" />
     <activity
@@ -98,7 +110,7 @@
         tools:layout="@layout/activity_login" />
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.example.forcaerp20.EditProfileFragment"
+        android:name="com.example.forcaerp20.ProfilePage.EditProfileFragment"
         android:label=""
         tools:layout="@layout/fragment_edit_profile" >
         <action
@@ -109,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailNewsFragment"
-        android:name="com.example.forcaerp20.DetailNewsFragment"
+        android:name="com.example.forcaerp20.NewsPage.DetailNewsFragment"
         android:label=""
         tools:layout="@layout/fragment_detail_news" >
         <action
@@ -123,17 +135,17 @@
             android:name="judul"
             app:argType="string"
             android:defaultValue="judul"
-            app:nullable="true" />
+           />
+        <argument
+            android:name="image"
+            app:argType="reference"/>
+        <argument
+            android:name="tanggal"
+            app:argType="string"
+            android:defaultValue="00-00-0000" />
+        <argument
+            android:name="isi"
+            app:argType="string" />
 
-<!--        <argument-->
-<!--            android:name="tanggal"-->
-<!--            app:argType="string"-->
-<!--            android:defaultValue="00-00-0000" />-->
-<!--        <argument-->
-<!--            android:name="image"-->
-<!--            app:argType="integer" />-->
-<!--        <argument-->
-<!--            android:name="isi"-->
-<!--            app:argType="string" />-->
     </fragment>
 </navigation>

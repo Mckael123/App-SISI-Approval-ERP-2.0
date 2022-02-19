@@ -40,22 +40,17 @@
 </string>
     <string name="tittle_latest_news"><u>Latest News</u></string>
 
-<!--    contoh isi berita-->
-    <string name="news_a">Beberapa hari lagi kita akan memasuki tahun 2022. Menjelang akhir tahun ini, banyak pemilik bisnis telah merencanakan berbagai pengembangan. Mulai dari ekspansi pasar, hingga pengembangan pada perangkat teknologi digital yang mendukung operasional bisnis. Hai ini tentunya tak lepas dari perkembangan teknologi yang pesat sehingga semakin banyaknya digital platform bermunculan. Berbagai kemutakhiran teknologi digital ini diyakini mampu memberikan sumbangsih yang besar untuk kemudahan operasional perusahaan. Pemanfaatan digital platform bagi bisnis ini juga diyakini sebagai langkah strategis untuk melakukan ekspansi dan memunculkan peluang baru bagi bisnis.\n" +
-                "\n" +
-                "Jika saat ini Anda sedang membutuhkan suatu sistem untuk pengelolaan operasional bisnis, maka Anda sedang membaca artikel yang tepat. Penanganan operasional bisnis melalui pemanfaatan digital platform secara otomatis dapat meningkatkan efisiensi dan efektivitas proses bisnis Anda. Berikut ini adalah 4 aplikasi yang bisa menjadi pertimbangan Anda.\n" +
-                "\n" +
-                "FORCA HR\n" +
-                "Layanan FORCA HR merupakan sistem yang akan memudahkan Anda dalam merencanakan, mengelola, dan mengevaluasi proses bisnis SDM di perusahaan. Aplikasi HR yang komprehensif ini dilengkapi dengan berbagai fitur untuk mengelola dan melihat secara visual susunan organisasi karyawan baik dalam bentuk garis atau lini maupun bentuk bagan pohon, serta berbagai komponen lainnya.\n,</string>
+    <!--    contoh isi berita-->
+    <string name="news_a">ika saat ini Anda sedang membutuhkan suatu sistem untuk pengelolaan operasional bisnis, maka Anda sedang membaca artikel yang tepat. Penanganan operasional bisnis melalui pemanfaatan digital platform secara otomatis dapat meningkatkan efisiensi dan efektivitas proses bisnis Anda. Berikut ini adalah 4 aplikasi yang bisa menjadi pertimbangan Anda.
 
-    <string name="news_b">Mengingat SDM merupakan salah satu aset paling berharga dalam perusahaan, FORCA HR menyediakan fungsi untuk pengelolaan informasi yang terperinci dari data karyawan yang Anda miliki. Anda juga dapat melakukan simplifikasi pengaturan jadwal dan pola kerja karyawan yang dinamis dan bervariasi sesuai dengan kebutuhan perusahaan Anda.\n" +
-                "\n" +
-                "Selain itu, FORCA HR dilengkapi dengan layanan FORCA ESS (Employee Self-Service) yang akan memudahkan Anda dalam memantau kinerja dan kedisiplinan absensi karyawan dalam perusahaan Anda. Melalui layanan ini karyawan cukup melakukan clock-in dan clock-out saja, data kehadiran otomatis masuk dalam database. Fitur geo tagging yang dimiliki oleh fitur FORCA ESS juga dapat memberikan informasi lokasi paling akurat dan bisa membantu perusahaan untuk memastikan bahwa karyawan bekerja di tempat yang seharusnya.\n" +
-                "\n" +
-                "FORCA ERP\n" +
-                "FORCA ERP merupakan platform information capital bisnis yang menawarkan banyak modul di dalamnya. Layanan sistem Enterprise Resource Planning (ERP) ini menghadirkan modul akuntansi dan keuangan yang dilengkapi fitur seperti piutang/hutang, akuntansi biaya, dan manajemen arus kas. FORCA ERP bekerja dengan cara memusatkan semua aspek operasi bisnis dalam satu sistem. Hal ini mencakup fungsionalitas yang dirancang khusus untuk membuat banyak area bisnis yang berbeda dapat terintegrasi dalam suatu sistem, sehingga mampu menyentuh setiap bagian dari proses bisnis pada semua level perusahaan.\n" +
-                "\n" +
-                "Selain itu, Layanan FORCA ERP ini memisahkan kontrol akses pengguna sehingga dapat diintegrasikan dengan aplikasi lain yang dilengkapi dengan proses ERP seperti pembayaran online, CRM, dan manajemen perjalanan. Selain itu FORCA ERP juga menyediakan laporan yang ditampilkan secara real time untuk dapat dilihat pada dashboard.\n</string>
+FORCA HR
+Layanan FORCA HR merupakan sistem yang akan memudahkan Anda dalam merencanakan, mengelola, dan mengevaluasi proses bisnis SDM di perusahaan. Aplikasi HR yang komprehensif ini dilengkapi dengan berbagai fitur untuk mengelola dan melihat secara visual susunan organisasi karyawan baik dalam bentuk garis atau lini maupun bentuk bagan pohon, serta berbagai komponen lainnya.
+</string>
+    <string name="news_b"> Mengingat SDM merupakan salah satu aset paling berharga dalam perusahaan, FORCA HR menyediakan fungsi untuk pengelolaan informasi yang terperinci dari data karyawan yang Anda miliki. Anda juga dapat melakukan simplifikasi pengaturan jadwal dan pola kerja karyawan yang dinamis dan bervariasi sesuai dengan kebutuhan perusahaan Anda.
+
+Selain itu, FORCA HR dilengkapi dengan layanan FORCA ESS (Employee Self-Service) yang akan memudahkan Anda dalam memantau kinerja dan kedisiplinan absensi karyawan dalam perusahaan Anda. Melalui layanan ini karyawan cukup melakukan clock-in dan clock-out saja, data kehadiran otomatis masuk dalam database. Fitur geo tagging yang dimiliki oleh fitur FORCA ESS juga dapat memberikan informasi lokasi paling akurat dan bisa membantu perusahaan untuk memastikan bahwa karyawan bekerja di tempat yang seharusnya.
+</string>
+
     <string name="news_c">Demi pengelolaan supply chain yang baik pada bisnis, sebaiknya Anda mulai pertimbangkan aplikasi Procsi untuk kebutuhan operasional Anda. Pemanfaatan aplikasi e-procurement ini menjanjikan pengelolaan kegiatan procurement yang lebih efisien. Dilengkapi dengan fitur pengelolaan vendor, tender, penagihan, hingga ekspedisi pemanfaatan aplikasi akan memberikan kemudahan dalam proses procurement bisnis Anda. Melalui penggunaan Procsi, Anda dapat mengelola setiap pengajuan pembelian dari setiap cabang hingga mendapatkan penawaran terbaik dari supplier. Aktivitas procurement lebih terkendali dengan manajemen budgeting dan cost center yang dapat dikelola per departemen atau proyek, menarik bukan!
 </string>
 
