@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:title="Home" />
+        <item
+            android:id="@+id/profileFragment"
+            android:title="Profile" />
+        <item
+            android:id="@+id/dashboardActivity"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/newsFragment"
+            android:title="News" />
+        <item
+            android:id="@+id/aboutFragment"
+            android:title="About" />
+        <item
+            android:id="@+id/helpFragment"
+            android:title="Help" />
+
+    </group>
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/loginActivity"
+                    android:title="Log Out" />
+            </group>
+        </menu>
+    </item>
+
+
+
+    <!--    <item android:title="powered by" />-->
+
+    <!--    <item android:icon="@drawable/logo_sisi"-->
+    <!--          android:title=""/>-->
+</menu>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Forca ERP 2.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_homes">HomesActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="deskripsi_sisi">PT Sinergi Informatika Semen Indonesia (SISI)
+        merupakan anak usaha dari PT Semen Indonesia
+        (Persero) Tbk.  Berdiri sejak tanggal 9 Juni 2014, SISI
+        merupakan perusahaan yang bergerak dibidang
+        Teknologi Informasi yang senantiasa memberikan
+        solusi-solusi ICT yang handal, mutakhir, dan
+        berorientasi untuk memenuhi harapan pelanggan kami.</string>
+
+    <string name="poin1_weDo">Aktif berkontribusi di bidang IT dalam inovasi, pengembangan, dan keberlanjutan Semen Indonesia beserta seluruh anak perusahaannya.</string>
+    <string name="poin2_weDo">Berbagi keahlian pengalaman dengan bisnis dan industri lain dalam skema yang saling menguntungkan.</string>
+    <string name="poin3_weDo">Kami juga berkontribusi kepada komunitas dan negara untuk meningkatkan adopsi ICT dalam menumbuhkan daya saing dan menjadikan hidup lebih mudah.</string>
+
+    <string name="ErpVersion_descp">FORCA Suite (ERP, CRM, dan HRIS) hadir sebagai solusi yang tepat bagi perusahaan Anda
+        \nKami memahami bahwa saat ini seluruh pelaku bisnis perlu melakukan inovasi-inovasi dan optimalisasi pemanfaatan teknologi
+        informasi (TI) agar dapat bersaing di tengah pandemi dan persaingan industri. Sementara Perkembangan teknologi informasi (TI)
+        yang pesat menjadi peluang pelaku bisnis untuk memanfaatkan teknologi TI sebagai enabler atau pendorong untuk meningkatkan
+        daya saing perusahaan. Pemanfaatan Teknologi Informasi ini diharapkan dapat memberi manfaat strategis antara lain ;</string>
+    <string name="poin1_ERPVer">Visibility yang lebih baik terhadap jalannya operasi perusahaan (informasi mudah diakses dan up to date).
+</string>
+    <string name="poin2_ERPVer">Operasi perusahaan lebih terkontrol secara sistem/teknologi, sehingga mengurangi faktor human error.
+</string>
+    <string name="poin3_ERPVer">Karyawan dapat lebih produktif dengan adanya otomasi-otomasi proses yang berulang  konsisten.
+</string>
+    <string name="tittle_latest_news"><u>Latest News</u></string>
+
+    <!--    contoh isi berita-->
+    <string name="news_a">ika saat ini Anda sedang membutuhkan suatu sistem untuk pengelolaan operasional bisnis, maka Anda sedang membaca artikel yang tepat. Penanganan operasional bisnis melalui pemanfaatan digital platform secara otomatis dapat meningkatkan efisiensi dan efektivitas proses bisnis Anda. Berikut ini adalah 4 aplikasi yang bisa menjadi pertimbangan Anda.
+
+FORCA HR
+Layanan FORCA HR merupakan sistem yang akan memudahkan Anda dalam merencanakan, mengelola, dan mengevaluasi proses bisnis SDM di perusahaan. Aplikasi HR yang komprehensif ini dilengkapi dengan berbagai fitur untuk mengelola dan melihat secara visual susunan organisasi karyawan baik dalam bentuk garis atau lini maupun bentuk bagan pohon, serta berbagai komponen lainnya.
+</string>
+    <string name="news_b"> Mengingat SDM merupakan salah satu aset paling berharga dalam perusahaan, FORCA HR menyediakan fungsi untuk pengelolaan informasi yang terperinci dari data karyawan yang Anda miliki. Anda juga dapat melakukan simplifikasi pengaturan jadwal dan pola kerja karyawan yang dinamis dan bervariasi sesuai dengan kebutuhan perusahaan Anda.
+
+Selain itu, FORCA HR dilengkapi dengan layanan FORCA ESS (Employee Self-Service) yang akan memudahkan Anda dalam memantau kinerja dan kedisiplinan absensi karyawan dalam perusahaan Anda. Melalui layanan ini karyawan cukup melakukan clock-in dan clock-out saja, data kehadiran otomatis masuk dalam database. Fitur geo tagging yang dimiliki oleh fitur FORCA ESS juga dapat memberikan informasi lokasi paling akurat dan bisa membantu perusahaan untuk memastikan bahwa karyawan bekerja di tempat yang seharusnya.
+</string>
+
+    <string name="news_c">Demi pengelolaan supply chain yang baik pada bisnis, sebaiknya Anda mulai pertimbangkan aplikasi Procsi untuk kebutuhan operasional Anda. Pemanfaatan aplikasi e-procurement ini menjanjikan pengelolaan kegiatan procurement yang lebih efisien. Dilengkapi dengan fitur pengelolaan vendor, tender, penagihan, hingga ekspedisi pemanfaatan aplikasi akan memberikan kemudahan dalam proses procurement bisnis Anda. Melalui penggunaan Procsi, Anda dapat mengelola setiap pengajuan pembelian dari setiap cabang hingga mendapatkan penawaran terbaik dari supplier. Aktivitas procurement lebih terkendali dengan manajemen budgeting dan cost center yang dapat dikelola per departemen atau proyek, menarik bukan!
+</string>
+
+</resources>

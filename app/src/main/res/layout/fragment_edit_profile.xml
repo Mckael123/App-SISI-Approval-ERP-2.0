@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilePage.EditProfileFragment">
+
+    <ImageView
+        android:id="@+id/headerEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/headeredit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profilEditDetail"
+        android:layout_width="95dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/profiledit"
+        app:layout_constraintStart_toStartOf="@+id/headerEditProfile"
+        app:layout_constraintTop_toTopOf="@+id/headerEditProfile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cameraHeader"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="52dp"
+        app:icon="@drawable/camera"
+        app:iconTint="#fff"
+        app:iconGravity="textStart"
+        app:layout_constraintStart_toStartOf="@+id/headerEditProfile"
+        app:layout_constraintTop_toTopOf="@+id/headerEditProfile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cameraProfile"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:icon="@drawable/camera"
+        app:iconGravity="textStart"
+        app:iconTint="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/profilEditDetail"
+        app:layout_constraintEnd_toEndOf="@+id/profilEditDetail"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/profilEditDetail"
+        app:layout_constraintTop_toTopOf="@+id/profilEditDetail"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <TextView
+        android:id="@+id/changeProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Change Profile Photo"
+        android:textColor="#068AC4"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilEditDetail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="User Name"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeProfile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Bintang Agastya" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Bintang Agastya@gmail.com" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirmEditProfile"
+        android:layout_width="140dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/editprofile"
+        android:drawableStart="@drawable/confirm"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="9dp"
+        android:text="Confirm"
+        android:textColor="#35A6EF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelEditProfile"
+        android:layout_width="140dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/bgcancel"
+        android:drawableStart="@drawable/cancel"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="9dp"
+        android:text="Cancel"
+        android:textColor="#E80505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/sisi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
