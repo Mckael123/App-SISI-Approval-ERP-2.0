@@ -73,6 +73,7 @@ class NewsFragment : Fragment() {
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
                 //pake navigate safe Args
+
                 val action = NewsFragmentDirections.actionNavNewsToDetailNewsFragment(
                    judul= list[position].judul,
                     image=list[position].image,
