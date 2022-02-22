@@ -23,10 +23,9 @@
         android:name="com.example.forcaerp20.HomePage.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
-
         <action
-            android:id="@+id/action_homeFragment_to_newsFragment"
-            app:destination="@id/newsFragment" />
+            android:id="@+id/action_homeFragment_to_newsFromHomeFragment"
+            app:destination="@id/newsFromHomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -42,16 +41,16 @@
                 android:name="judul"
                 app:argType="string"
                 android:defaultValue="judul" />
-<!--            <argument-->
-<!--                android:name="image"-->
-<!--                app:argType="reference"/>-->
+            <argument
+                android:name="image"
+                app:argType="reference"/>
             <argument
                 android:name="tanggal"
                 app:argType="string"
                 android:defaultValue="00-00-0000" />
-<!--            <argument-->
-<!--                android:name="isi"-->
-<!--                app:argType="string" />-->
+            <argument
+                android:name="isi"
+                app:argType="string" />
         </action>
     </fragment>
     <fragment
@@ -147,5 +146,14 @@
             android:name="isi"
             app:argType="string" />
 
+    </fragment>
+    <fragment
+        android:id="@+id/newsFromHomeFragment"
+        android:name="com.example.forcaerp20.NewsPage.NewsFromHomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFromHomeFragment_to_detailNewsFragment"
+            app:destination="@id/detailNewsFragment" />
     </fragment>
 </navigation>

@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.forcaerp20.DashboardPage.DashboardActivity
 import com.example.forcaerp20.R
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
@@ -24,7 +27,10 @@ class HomeFragment : Fragment() {
         R.drawable.slide2,
         R.drawable.slide3
     )
-
+    private lateinit var navController: NavController
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var listener: NavController.OnDestinationChangedListener
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,22 +42,27 @@ class HomeFragment : Fragment() {
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
         sliderView.startAutoCycle()
 
-        var buttonTodashboard :Button= view.findViewById(R.id.gotodashboard)
-        var buttonReportTodashboard :Button= view.findViewById(R.id.reportToDashboard)
-        var textMoveToNews :TextView = view.findViewById(R.id.moveToNewsFragment)
+        var buttonTodashboard: Button = view.findViewById(R.id.gotodashboard)
+        var buttonReportTodashboard: Button = view.findViewById(R.id.reportToDashboard)
+        buttonTodashboard.setOnClickListener {
+            var intentodashboard = Intent(activity, DashboardActivity::class.java)
+            startActivity(intentodashboard)
+        }
+        buttonReportTodashboard.setOnClickListener {
+            var intentodashboard = Intent(activity, DashboardActivity::class.java)
+            startActivity(intentodashboard)
+        }
 
-        buttonTodashboard.setOnClickListener{
-            var intentodashboard =Intent(activity, DashboardActivity::class.java)
-            startActivity(intentodashboard)
-        }
-        buttonReportTodashboard.setOnClickListener{
-            var intentodashboard =Intent(activity, DashboardActivity::class.java)
-            startActivity(intentodashboard)
-        }
+
+        var textMoveToNews: TextView = view.findViewById(R.id.moveToNewsFragment)
         textMoveToNews.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_newsFragment)
-
+            Navigation.findNavController(view)
+                .navigate(R.id.action_homeFragment_to_newsFromHomeFragment)
         }
+
+
+
+
     }
 
     override fun onCreateView(

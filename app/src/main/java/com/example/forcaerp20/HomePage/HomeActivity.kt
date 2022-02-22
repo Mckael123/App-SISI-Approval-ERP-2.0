@@ -17,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityHomeBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,7 +32,8 @@ class HomeActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_homes)
+        val navController = findNavController(R.id.nav_host_fragment_content_homes)//fragment yang diambil
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -43,11 +45,10 @@ class HomeActivity : AppCompatActivity() {
                 R.id.aboutFragment,
                 R.id.helpFragment,
                 R.id.loginActivity
-            ), drawerLayout
-        )
-
-        setupActionBarWithNavController(navController, appBarConfiguration)
+            ), drawerLayout)
         navView.setupWithNavController(navController)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+
     }
 
 
