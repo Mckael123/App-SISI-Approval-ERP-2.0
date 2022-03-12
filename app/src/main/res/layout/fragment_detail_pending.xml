@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DashboardPage.pendingFragment.DetailPendingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back_to_ListPending"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="28dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:icon="@drawable/ic_baseline_arrow_back"
+            app:iconGravity="textTop"
+            app:iconTint="#35A6EF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/lato"
+            android:text="Detail Document"
+
+            android:textColor="#007AB6"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="37dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc Type"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="Name Document"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVtype" />
+
+        <TextView
+            android:id="@+id/pendingTVtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/lato"
+            android:text="Leave Request"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView37"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/tvnamedoc"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/lato"
+            android:text="Name doc template"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVtype" />
+
+        <TextView
+            android:id="@+id/pendingTVnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="2100007"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView37"
+            app:layout_constraintTop_toBottomOf="@+id/tvnamedoc" />
+
+        <TextView
+            android:id="@+id/pendingTVbusiness"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="36dp"
+            android:fontFamily="@font/lato"
+            android:text="Universitas Airlangga"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVnumber" />
+
+        <TextView
+            android:id="@+id/pendingTVnominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/lato"
+            android:text="0000"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView40"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVbusiness" />
+
+        <TextView
+            android:id="@+id/pendingTVDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato"
+            android:text="24/01/2022"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVnominal" />
+
+        <TextView
+            android:id="@+id/pendingTVdesc"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Process in Testing"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+        <TextView
+            android:id="@+id/pendingTVstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Pending"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView45"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVdesc" />
+
+        <TextView
+            android:id="@+id/pendingTvhistory"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="24/01/2022 15.06 : Ariel Bintang Rafid ((Start))
+24/01/2022 15.06 : Ariel Bintang Rafid
+((DocPrepare))"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc Number"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnamedoc" />
+
+        <TextView
+
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/lato"
+            android:text="Business Partner"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVnumber" />
+
+        <TextView
+
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/lato"
+            android:text="Nominal"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVbusiness" />
+
+        <TextView
+
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc Date"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVnominal" />
+
+        <TextView
+
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc History"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+        <TextView
+
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc Description"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTvhistory" />
+
+        <TextView
+
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="Doc Status"
+            android:textColor="#35A6EF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingTVdesc" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonRejectPending"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/btn_reject_pending"
+            android:fontFamily="@font/lato"
+            android:text="Reject"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ButtonAcceptPending"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/btn_approve_pending"
+            android:fontFamily="@font/lato"
+            android:text="Approve"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_constraintStart_toEndOf="@+id/ButtonRejectPending"
+            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonRejectPending" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

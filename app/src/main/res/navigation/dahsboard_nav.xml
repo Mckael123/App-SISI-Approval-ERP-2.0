@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dahsboard_nav"
+    app:startDestination="@id/pendingFragment">
+
+    <fragment
+        android:id="@+id/pendingFragment"
+        android:name="com.example.forcaerp20.DashboardPage.pendingFragment.PendingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_pendings" >
+        <action
+            android:id="@+id/action_pendingFragment_to_listPendingFragment"
+            app:destination="@id/listPendingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailPendingFragment"
+        android:name="com.example.forcaerp20.DashboardPage.pendingFragment.DetailPendingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_detail_pending" >
+        <action
+            android:id="@+id/action_detailPendingFragment_to_listPendingFragment"
+            app:destination="@id/listPendingFragment" />
+        <argument
+            android:name="document_type"
+            app:argType="string" />
+        <argument android:name="document_name"
+            app:argType="string" />
+        <argument
+            android:name="document_number"
+            app:argType="integer" />
+        <argument android:name="business_partner"
+            app:argType="string" />
+        <argument
+            android:name="document_nominal"
+            app:argType="string" />
+        <argument
+            android:name="document_date"
+            app:argType="string"
+            android:defaultValue="00-00-0000" />
+        <argument
+            android:name="document_history"
+            app:argType="string" />
+        <argument
+            android:name="document_description"
+            app:argType="string" />
+        <argument
+            android:name="document_status"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPendingFragment"
+        android:name="com.example.forcaerp20.DashboardPage.pendingFragment.ListPendingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_list_pending" >
+        <action
+            android:id="@+id/action_listPendingFragment_to_detailPendingFragment"
+            app:destination="@id/detailPendingFragment" />
+        <action
+            android:id="@+id/action_listPendingFragment_to_pendingFragment"
+            app:destination="@id/pendingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/approvFragment"
+        android:name="com.example.forcaerp20.DashboardPage.approveFragment.ApprovFragment"
+        android:label=""
+        tools:layout="@layout/fragment_approved" />
+</navigation>

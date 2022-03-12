@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DashboardPage.pendingFragment.PendingFragment"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/lato"
+            android:text="Pending Document"
+            android:textColor="#007AB6"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_list_RecyclerView"
+            android:layout_width="389dp"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35"
+            tools:listitem="@layout/category_list_item" />
+
+        <TextView
+            android:id="@+id/NodocumentNotifPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="316dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="NO DOCUMENT"
+            android:textColor="#ADADAD"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/NodocumentNotifPendingDeskrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There is no document attached "
+            android:textColor="#ADADAD"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NodocumentNotifPending" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="50dp"
+            android:orientation="vertical"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_list_RecyclerView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
