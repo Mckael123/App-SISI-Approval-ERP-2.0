@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +18,7 @@ class ListPendingFragment : Fragment() {
 
     private lateinit var recylerPending: RecyclerView
     private lateinit var listPendingArray: ArrayList<ListPending>
+    private lateinit var pendingDrawerlayout :DrawerLayout
 
     lateinit var TypeDocument: Array<String>
     lateinit var NameDocument: Array<String>
@@ -31,6 +34,14 @@ class ListPendingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        pendingDrawerlayout = view.findViewById(R.id.drawer_layout_pending)
+        pendingDrawerlayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        var btnfilterPending :Button = view.findViewById(R.id.BtnFilterPending)
+        btnfilterPending.setOnClickListener {
+            pendingDrawerlayout.openDrawer(GravityCompat.END, true)
+
+        }
 
         //contoh data
         TypeDocument= arrayOf("AP Payment","AP Payment","AP Payment")

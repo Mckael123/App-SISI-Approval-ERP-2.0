@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".DashboardPage.pendingFragment.SideFilterPendingFragment">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_filterPending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton_Asc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="40dp"
+            android:drawableEnd="@drawable/ic_vector_sort_asc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato"
+            android:text="Sort A to Z"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:drawableEnd="@drawable/ic_vector_sort_desc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato"
+            android:text="Sort Z to A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton_Asc" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/lato"
+        android:text="Start Date"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup_filterPending" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato"
+        android:text="End Date"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartDatePendingfield" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/StartDatePendingfield"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        app:boxBackgroundColor="#66E2E2E2"
+
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:startIconDrawable="@drawable/date_icon_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+        <AutoCompleteTextView
+            android:id="@+id/StartDatePending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:text="dd/mm/yyyy"
+            android:textAlignment="viewStart"
+            android:textColor="#7E000000"
+            android:textSize="18dp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EndDatePendingfield"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        app:boxBackgroundColor="#66E2E2E2"
+
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44"
+        app:startIconDrawable="@drawable/date_icon_filter">
+
+        <AutoCompleteTextView
+            android:id="@+id/EndDatePending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:text="dd/mm/yyyy"
+            android:textAlignment="viewStart"
+            android:textColor="#7E000000"
+            android:textSize="18dp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterSetPending"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/editprofile"
+        android:fontFamily="@font/lato"
+        android:text="Filter"
+        android:textAllCaps="false"
+        android:textColor="#007AB6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EndDatePendingfield" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
