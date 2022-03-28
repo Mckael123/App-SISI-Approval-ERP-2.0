@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -38,10 +39,14 @@ class ListPendingFragment : Fragment() {
         pendingDrawerlayout = view.findViewById(R.id.drawer_layout_pending)
         pendingDrawerlayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
         var btnfilterPending :Button = view.findViewById(R.id.BtnFilterPending)
+
         btnfilterPending.setOnClickListener {
             pendingDrawerlayout.openDrawer(GravityCompat.END, true)
 
+
         }
+
+
 
         //contoh data
         TypeDocument= arrayOf("AP Payment","AP Payment","AP Payment")
@@ -70,6 +75,7 @@ class ListPendingFragment : Fragment() {
                 "Mau cek batuk mas. batuk indri berdarah. mohon\n" +
                 "izin ya mas, makasi ya mas", "mas Don, mas Fib. Saya izin pulang karena demam","mas Don saya izin untuk meminta approval document dari anak magang")
         StatusDocument= arrayOf("Pending","Pending","Pending")
+
         listPendingArray = arrayListOf()
 
         for (i in NameDocument.indices) {
@@ -91,6 +97,7 @@ class ListPendingFragment : Fragment() {
         recylerPending = view.findViewById(R.id.pending_list_RecyclerView)
         recylerPending.layoutManager = LinearLayoutManager(requireActivity())
         recylerPending.adapter = adapter
+
         adapter.setOnItemClickListener(object : ListPendingAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
                 val listToDetailPending =
@@ -110,6 +117,8 @@ class ListPendingFragment : Fragment() {
             }
 
         })
+
+
         var arrowBacktoPendingDash = view.findViewById<Button>(R.id.back_to_dashboardPending)
         arrowBacktoPendingDash.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_listPendingFragment_to_pendingFragment)
