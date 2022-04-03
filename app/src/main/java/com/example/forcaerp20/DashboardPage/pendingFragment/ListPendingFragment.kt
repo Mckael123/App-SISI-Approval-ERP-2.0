@@ -1,10 +1,16 @@
 package com.example.forcaerp20.DashboardPage.pendingFragment
 
+import android.app.DatePickerDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,13 +19,19 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forcaerp20.R
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class ListPendingFragment : Fragment() {
 
     private lateinit var recylerPending: RecyclerView
     private lateinit var listPendingArray: ArrayList<ListPending>
+    private lateinit var tempArrayList : ArrayList<ListPending>
     private lateinit var pendingDrawerlayout :DrawerLayout
+
 
     lateinit var TypeDocument: Array<String>
     lateinit var NameDocument: Array<String>
@@ -30,7 +42,12 @@ class ListPendingFragment : Fragment() {
     lateinit var HistoryDocument: Array<String>
     lateinit var DescriptionDocument: Array<String>
     lateinit var StatusDocument: Array<String>
+    lateinit var  adapter:ListPendingAdapter
 
+    var onStartDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    var onEndDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    var asc_pending :Boolean? = null
+    var desc_pending :Boolean? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,17 +59,67 @@ class ListPendingFragment : Fragment() {
 
         btnfilterPending.setOnClickListener {
             pendingDrawerlayout.openDrawer(GravityCompat.END, true)
-
-
         }
 
+        var fieldStartDateFilter: AutoCompleteTextView = view.findViewById(R.id.StartDatePending)
+        var fieldEndDateFilter: AutoCompleteTextView = view.findViewById(R.id.EndDatePending)
+        val calendar = Calendar.getInstance()
+        val year = calendar[Calendar.YEAR]
+        val month = calendar[Calendar.MONTH]
+        val day = calendar[Calendar.DAY_OF_MONTH]
+
+        //select start date
+        fieldStartDateFilter.setOnClickListener {
+            val datePickerDialog = DatePickerDialog(
+                requireActivity(), android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+
+                onStartDateSetListener, year, month, day
+            )
+            datePickerDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            datePickerDialog.show()
+        }
+        onStartDateSetListener =
+            DatePickerDialog.OnDateSetListener { datePicker, year, month, dayofMonth ->
+                var month = month
+                month = month + 1
+                val date = "$dayofMonth/$month/$year"
+                fieldStartDateFilter.setText(date)
+            }
+
+        fieldEndDateFilter.setOnClickListener {
+            val datePickerDialog = DatePickerDialog(
+                requireActivity(), android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                onEndDateSetListener, year, month, day
+            )
+            datePickerDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            datePickerDialog.show() }
+        //select end date
+        onEndDateSetListener= DatePickerDialog.OnDateSetListener { datePicker, year, month, dayofMonth ->
+            var month = month
+            month = month + 1
+            val date = "$dayofMonth/$month/$year"
+            fieldEndDateFilter.setText(date)}
+
+        var FilterPendingSortGroup : RadioGroup = view.findViewById(R.id.RadioGroup_filterPending)
+        FilterPendingSortGroup.setOnCheckedChangeListener { radioGroup, Radio_id ->
+            if (Radio_id == R.id.radioButton_Asc){
+                 asc_pending= true
+                desc_pending = false
+
+            }
+            else if (Radio_id == R.id.radioButton_Desc){
+                desc_pending= true
+                asc_pending= false
+
+            }
+        }
 
 
         //contoh data
         TypeDocument= arrayOf("AP Payment","AP Payment","AP Payment")
         NameDocument = arrayOf(
-            "Forca Leave 2100016: idaF -46 ",
             "Daxa Leave 2100016: idaF -555 ",
+            "Forca Leave 2100016: idaF -46 ",
             "Barca Leave 2100016: idaF -466"
         )
         NumberDocument = arrayOf(1234567,2100018,3958002)
@@ -77,6 +144,8 @@ class ListPendingFragment : Fragment() {
         StatusDocument= arrayOf("Pending","Pending","Pending")
 
         listPendingArray = arrayListOf()
+        tempArrayList = arrayListOf()
+        tempArrayList.addAll(listPendingArray)
 
         for (i in NameDocument.indices) {
 
@@ -93,9 +162,10 @@ class ListPendingFragment : Fragment() {
             listPendingArray.add(PendingDocumentList)
         }
 
-        var adapter = ListPendingAdapter(listPendingArray)
+
         recylerPending = view.findViewById(R.id.pending_list_RecyclerView)
         recylerPending.layoutManager = LinearLayoutManager(requireActivity())
+        var adapter = ListPendingAdapter(listPendingArray)
         recylerPending.adapter = adapter
 
         adapter.setOnItemClickListener(object : ListPendingAdapter.onItemClickListener {
@@ -123,6 +193,88 @@ class ListPendingFragment : Fragment() {
         arrowBacktoPendingDash.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_listPendingFragment_to_pendingFragment)
         }
+
+        var btnFilter :Button = view.findViewById(R.id.filterSetPending)
+
+        btnFilter.setOnClickListener {
+            val StartDate = fieldStartDateFilter.text.toString().trim()
+            val EndDate = fieldEndDateFilter.text.toString().trim()
+//            if((!StartDate.equals("")||!EndDate.equals("")||!StartDate.equals(null)||!EndDate.equals(null))){
+////                try {
+////                    var dateFormatter = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+////                    val strDate = dateFormatter.parse(StartDate)
+////                    val endDate = dateFormatter.parse(EndDate)
+////                   filterDateRange(strDate,endDate)
+////                }catch (e: ParseException){
+////                    e.printStackTrace()
+////                }
+//                Toast.makeText(requireContext(), "$StartDate & $EndDate" , Toast.LENGTH_SHORT).show()
+//            }
+
+            //milih tanggal sama  mencet tombol AZ
+            if(StartDate!="dd/mm/yyyy" && EndDate!="dd/mm/yyyy"&& asc_pending== true){
+                Toast.makeText(requireContext(), "$StartDate & $EndDate with AZ" , Toast.LENGTH_SHORT).show()
+                Collections.sort(listPendingArray,ListPending.sortByNameAZ)
+                adapter.notifyDataSetChanged()
+            }
+            else if(StartDate!="dd/mm/yyyy" && EndDate!="dd/mm/yyyy"&& desc_pending== true){
+                Collections.sort(listPendingArray,ListPending.sortByNameZA)
+                Toast.makeText(requireContext(), "$StartDate & $EndDate with ZA" , Toast.LENGTH_SHORT).show()
+                adapter.notifyDataSetChanged()
+            }
+            //cuma milih tanggal
+            else if (StartDate!="dd/mm/yyyy" && EndDate!="dd/mm/yyyy"){
+                Toast.makeText(requireContext(), "$StartDate & $EndDate" , Toast.LENGTH_SHORT).show()
+            }
+            //cuma mencet tombol AZ
+            else if (asc_pending== true){
+                Collections.sort(listPendingArray,ListPending.sortByNameAZ)
+                Toast.makeText(requireContext(), "A to Z" , Toast.LENGTH_SHORT).show()
+                adapter.notifyDataSetChanged()
+            }
+            //cuma mencet tombol ZA
+            else if (desc_pending== true){
+                Collections.sort(listPendingArray,ListPending.sortByNameZA)
+                Toast.makeText(requireContext(), "Z to A" , Toast.LENGTH_SHORT).show()
+                adapter.notifyDataSetChanged()
+            }
+            pendingDrawerlayout.closeDrawers()
+        }
+
+        var btnClearFilter :Button = view.findViewById(R.id.filterClearPending)
+            btnClearFilter.setOnClickListener {
+                FilterPendingSortGroup.clearCheck()
+                fieldStartDateFilter.setText("dd/mm/yyyy")
+                fieldEndDateFilter.setText("dd/mm/yyyy")
+                asc_pending = false
+                desc_pending = false
+//                recylerPending.layoutManager
+//                recylerPending.layoutManager = LinearLayoutManager(requireActivity())
+//                adapter = ListPendingAdapter(listPendingArray)
+//                recylerPending.adapter = adapter
+
+            }
+    }
+
+    //filter class
+    fun filterDateRange(charText: Date, charText1: Date) {
+        listPendingArray.clear()
+        if (charText.equals("") || charText.equals(null)) {
+            listPendingArray.addAll(tempArrayList)
+        } else {
+            for (wp in tempArrayList) {
+                val sdf = SimpleDateFormat("yyyy-MM-dd")
+                try {
+                    val strDate: Date = sdf.parse(wp.DatePendingDocument)
+                    if (charText1.after(strDate) && charText.before(strDate)) {
+                        listPendingArray.add(wp)
+                    }
+                } catch (e: ParseException) {
+                    e.printStackTrace()
+                }
+            }
+        }
+        adapter.notifyDataSetChanged()
     }
 
     override fun onCreateView(

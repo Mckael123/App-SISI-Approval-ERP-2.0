@@ -11,4 +11,10 @@ data class ListPending(
     var DescriptionPendingDocument: String = "",
     var StatusPendingDocument: String = ""
 
-)
+){
+companion object{
+    var sortByNameAZ = Comparator<ListPending> { o1, o2 -> o1.NamePendingDocument.compareTo(o2.NamePendingDocument) }
+
+    var sortByNameZA = Comparator<ListPending> { o1, o2 -> o2.NamePendingDocument.compareTo(o1.NamePendingDocument) }
+}
+}

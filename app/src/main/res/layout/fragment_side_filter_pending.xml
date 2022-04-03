@@ -164,5 +164,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EndDatePendingfield" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterClearPending"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/bgcancel"
+        android:fontFamily="@font/lato"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textColor="#E80505"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSetPending" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

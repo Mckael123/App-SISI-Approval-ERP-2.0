@@ -7,9 +7,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.forcaerp20.NewsPage.ItemAdapter
 import com.example.forcaerp20.R
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
+
 
 class ListPendingAdapter(private val Pendinglist:ArrayList<ListPending>): RecyclerView.Adapter<ListPendingAdapter.PendingViewHolder>() {
-
+    var dateFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
     class PendingViewHolder(itemView: View,listener: onItemClickListener): RecyclerView.ViewHolder(itemView){
         var NamePendingDocument: TextView = itemView.findViewById(R.id.DocumentName)
         var DatePendingDocument: TextView = itemView.findViewById(R.id.DocumentDate)
@@ -37,6 +42,7 @@ class ListPendingAdapter(private val Pendinglist:ArrayList<ListPending>): Recycl
         return PendingViewHolder(view,ListListener)
     }
 
+    //sus
     override fun onBindViewHolder(holder: PendingViewHolder, position: Int) {
         val currentItem = Pendinglist[position]
         holder.NamePendingDocument.text = currentItem.NamePendingDocument
@@ -46,5 +52,6 @@ class ListPendingAdapter(private val Pendinglist:ArrayList<ListPending>): Recycl
     override fun getItemCount(): Int {
         return Pendinglist.size
     }
+
 
 }
