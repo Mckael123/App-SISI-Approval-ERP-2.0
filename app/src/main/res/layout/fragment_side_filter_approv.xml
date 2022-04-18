@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".DashboardPage.approveFragment.SideFilterApprovFragment">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_filterApprov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton_AscApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_vector_sort_asc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato"
+            android:text="Sort A to Z"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton_DescApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/ic_vector_sort_desc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato"
+            android:text="Sort Z to A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton_AscApp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato"
+        android:text="Start Date"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup_filterApprov" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato"
+        android:text="End Date"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartDateApprovfield" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/StartDateApprovfield"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        app:boxBackgroundColor="#66E2E2E2"
+
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:startIconDrawable="@drawable/date_icon_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+        <AutoCompleteTextView
+            android:id="@+id/StartDateApprov"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:text="dd/mm/yyyy"
+            android:textAlignment="viewStart"
+            android:textColor="#7E000000"
+            android:textSize="18dp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/EndDateApprovfield"
+        android:layout_width="204dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        app:boxBackgroundColor="#66E2E2E2"
+
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44"
+        app:startIconDrawable="@drawable/date_icon_filter">
+
+        <AutoCompleteTextView
+            android:id="@+id/EndDateApprov"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:text="dd/mm/yyyy"
+            android:textAlignment="viewStart"
+            android:textColor="#7E000000"
+            android:textSize="18dp"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato"
+        android:text="Document Status"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EndDateApprovfield"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:id="@+id/DocStaApprovfield"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        app:boxBackgroundColor="#66E2E2E2"
+        app:startIconDrawable="@drawable/ic_outline_menu_24"
+
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/DocStaApprov"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+
+            android:ellipsize="end"
+            android:fontFamily="@font/lato"
+            android:inputType="none"
+            android:paddingStart="20dp"
+            android:singleLine="true"
+            android:text="Document Status"
+            android:paddingTop="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="#7E000000"
+            android:textSize="18dp"
+            tools:ignore="LabelFor"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterSetApprov"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/editprofile"
+        android:fontFamily="@font/lato"
+        android:text="Filter"
+        android:textAllCaps="false"
+        android:textColor="#007AB6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DocStaApprovfield" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/filterClearApprov"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bgcancel"
+        android:fontFamily="@font/lato"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textColor="#E80505"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterSetApprov" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

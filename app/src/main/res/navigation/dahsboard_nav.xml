@@ -65,5 +65,57 @@
         android:id="@+id/approvFragment"
         android:name="com.example.forcaerp20.DashboardPage.approveFragment.ApprovFragment"
         android:label=""
-        tools:layout="@layout/fragment_approved" />
+        tools:layout="@layout/fragment_approved" >
+        <action
+            android:id="@+id/action_approvFragment_to_listApprovedFragment"
+            app:destination="@id/listApprovedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listApprovedFragment"
+        android:name="com.example.forcaerp20.DashboardPage.approveFragment.listApprovedFragment"
+        android:label="fragment_list_approved"
+        tools:layout="@layout/fragment_list_approved" >
+        <action
+            android:id="@+id/action_listApprovedFragment_to_approvFragment"
+            app:destination="@id/approvFragment" />
+        <action
+            android:id="@+id/action_listApprovedFragment_to_detailApprovedFragment"
+            app:destination="@id/detailApprovedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailApprovedFragment"
+        android:name="com.example.forcaerp20.DashboardPage.approveFragment.detailApprovedFragment"
+        android:label="fragment_detail_approved"
+        tools:layout="@layout/fragment_detail_approved" >
+        <action
+            android:id="@+id/action_detailApprovedFragment_to_listApprovedFragment"
+            app:destination="@id/listApprovedFragment" />
+        <argument
+            android:name="document_type_approv"
+            app:argType="string" />
+        <argument android:name="document_name_approv"
+            app:argType="string" />
+        <argument
+            android:name="document_number_approv"
+            app:argType="integer" />
+        <argument android:name="business_partner_approv"
+            app:argType="string" />
+        <argument
+            android:name="document_nominal_approv"
+            app:argType="string" />
+        <argument
+            android:name="document_date_approv"
+            app:argType="string"
+            android:defaultValue="00-00-0000" />
+        <argument
+            android:name="document_history_approv"
+            app:argType="string" />
+        <argument
+            android:name="document_description_approv"
+            app:argType="string" />
+        <argument
+            android:name="document_status_approv"
+            app:argType="string" />
+
+    </fragment>
 </navigation>

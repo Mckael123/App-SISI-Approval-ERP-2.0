@@ -54,4 +54,9 @@ Selain itu, FORCA HR dilengkapi dengan layanan FORCA ESS (Employee Self-Service)
     <string name="news_c">Demi pengelolaan supply chain yang baik pada bisnis, sebaiknya Anda mulai pertimbangkan aplikasi Procsi untuk kebutuhan operasional Anda. Pemanfaatan aplikasi e-procurement ini menjanjikan pengelolaan kegiatan procurement yang lebih efisien. Dilengkapi dengan fitur pengelolaan vendor, tender, penagihan, hingga ekspedisi pemanfaatan aplikasi akan memberikan kemudahan dalam proses procurement bisnis Anda. Melalui penggunaan Procsi, Anda dapat mengelola setiap pengajuan pembelian dari setiap cabang hingga mendapatkan penawaran terbaik dari supplier. Aktivitas procurement lebih terkendali dengan manajemen budgeting dan cost center yang dapat dikelola per departemen atau proyek, menarik bukan!
 </string>
 
+    <string-array name="DocStaApprov">
+        <item> Reject</item>
+        <item> Approve</item>
+    </string-array>
+
 </resources>

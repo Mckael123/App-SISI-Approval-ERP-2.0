@@ -8,7 +8,7 @@
     android:layout_marginBottom="8dp">
 
     <TextView
-        android:id="@+id/TypeDocumentPending"
+        android:id="@+id/TypeDocumentApprov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/CountID"
+        android:id="@+id/CountIDApprov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToListPending"
+        android:id="@+id/btnToListApprov"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="24dp"
         android:layout_height="28dp"
@@ -41,7 +41,7 @@
         app:icon="@drawable/next_btn_list_pending"
         app:iconGravity="textTop"
         app:iconTint="#000"
-        app:layout_constraintStart_toEndOf="@+id/CountID"
+        app:layout_constraintStart_toEndOf="@+id/CountIDApprov"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -51,6 +51,6 @@
         android:background="#83ADADAD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TypeDocumentPending" />
+        app:layout_constraintTop_toBottomOf="@+id/TypeDocumentApprov" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
